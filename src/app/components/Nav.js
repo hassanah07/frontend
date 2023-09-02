@@ -1,9 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/Gi";
-import { AiOutlineCloseCircle, AiOutlineUserSwitch } from "react-icons/Ai";
-import { BiLogOut } from "react-icons/Bi";
+import { FaBars, FaWindowClose } from "react-icons/fa";
+import { FiLogOut } from "react-icons/fi";
 import Image from "next/image";
 import { nav } from "../api/Nav";
 import { AdminNav } from "../api/AdminNav";
@@ -74,7 +73,7 @@ const Navigation = () => {
                 );
               })}
             </ul>
-            <AiOutlineCloseCircle
+            <FaWindowClose
               className="absolute top-3 right-3 text-3xl text-white cursor-pointer md:hidden"
               onClick={() => {
                 setToggleNav(true);
@@ -88,7 +87,7 @@ const Navigation = () => {
               setToggleNav(false);
             }}
           >
-            <GiHamburgerMenu className="text-5xl text-pink-800" />
+            <FaBars className="text-5xl text-pink-800" />
           </div>
         </div>
       )}
@@ -142,10 +141,10 @@ const Navigation = () => {
                 );
               })}
               <li className="font-semibold mx-3 md:ml-auto capitalize text-slate-600 dark:text-white py-2 md:py-auto text-2xl">
-                <BiLogOut onClick={logout} />
+                <FiLogOut onClick={logout} />
               </li>
             </ul>
-            <AiOutlineCloseCircle
+            <FaWindowClose
               className="absolute top-3 right-3 text-3xl text-white cursor-pointer md:hidden"
               onClick={() => {
                 setToggleNav(true);
@@ -160,10 +159,7 @@ const Navigation = () => {
             }}
           >
             <div className="cursor-pointer" title="Log Out">
-              <GiHamburgerMenu
-                className="text-5xl text-pink-800"
-                title="Log Out"
-              />
+              <FaBars className="text-5xl text-pink-800" title="Log Out" />
             </div>
           </div>
         </div>
